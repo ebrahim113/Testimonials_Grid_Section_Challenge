@@ -1,0 +1,128 @@
+:root {
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --font-family: "Barlow Semi Condensed", sans-serif;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.testmonials {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+}
+
+.testmonials .test {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px -5px var(--grey-400);
+}
+
+.testmonials .test.daniel {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: var(--purple-500);
+}
+
+.testmonials .test.jonathan {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: var(--grey-500);
+}
+
+.testmonials .test.kira {
+    grid-area: 1 / 4 / 3 / 5;
+    background-color: white;
+}
+
+.testmonials .test.jeanette {
+
+    background-color: white;
+}
+
+.testmonials .test.patrick {
+    grid-area: 2 / 2 / 3 / 4;
+    background-color: var(--dark-blue);
+}
+
+@media (max-width: 767px) {
+    .testmonials {
+        padding: 29px;
+        grid-template-columns: minmax(300px, 1fr);
+    }
+
+    .testmonials .test.daniel {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .testmonials .test.jonathan {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .testmonials .test.jeanette {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .testmonials .test.patrick {
+        grid-area: 4 / 1 / 5/ 2;
+    }
+
+    .testmonials .test.kira {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+}
+
+.testmonials .test .head {
+    display: flex;
+    align-items: center;
+}
+
+.testmonials .test .head img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testmonials .test .head .info h3 {
+    margin-bottom: 0;
+}
+
+.testmonials .test h3 {
+    font-weight: var(--font-weight-600);
+}
+
+.testmonials .test:not(.kira, .jeanette) h3 {
+    color: var(--grey-100);
+}
+
+.testmonials .test .head .info h4 {
+    margin-top: 0;
+    color: var(--grey-200);
+    font-weight: var(--font-weight-500);
+}
+
+.testmonials .test p {
+    color: var(--grey-400);
+    font-weight: var(--font-weight-600);
+}
+
+.testmonials .test:not(.kira, .jeanette) p {
+    color: white;
+}
+
+.testmonials .test q {
+    color: var(--grey-200);
+    font-weight: var(--font-weight-600);
+}
