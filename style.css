@@ -36,6 +36,21 @@ body {
 .testmonials .test.daniel {
     grid-area: 1 / 1 / 2 / 3;
     background-color: var(--purple-500);
+    position: relative;
+    z-index: -1;
+}
+
+.testmonials .test.daniel>img {
+    position: absolute;
+    z-index: -2;
+    right: 50px;
+    width: 120px;
+}
+
+@media (max-width: 767px) {
+    .testmonials .test.daniel>img {
+        display: none;
+    }
 }
 
 .testmonials .test.jonathan {
